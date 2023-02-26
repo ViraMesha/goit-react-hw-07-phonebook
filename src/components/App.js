@@ -15,10 +15,10 @@ export const App = () => {
   }, [dispatch]);
   return (
     <div>
+      {isLoading && !error && <b>Request in progress...</b>}
       <h1>Phonebook</h1>
       <ContactForm />
       <h2 style={{ fontSize: '34px', marginBottom: '10px' }}>Contacts</h2>
-      {isLoading && !error && <b>Request in progress...</b>}
       <Filter />
       <ContactList />
     </div>
